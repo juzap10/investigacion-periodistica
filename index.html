@@ -24,6 +24,10 @@
 		    background-color: #f9f9f9;
 		    border-top: 1px solid #e5e5e5;
 		}
+
+		#tabcontent p{
+			font-size: 1.2em;
+		}
 	</style>
 </head>
 <body>
@@ -32,7 +36,7 @@
 		    <p style="text-align: center; font-size: 2.5em;">¿Cuál ha sido la evolución de la oferta cultural en los Teatros Matacandelas y el Pequeño Teatro desde el 2015?</p>
 		    <div style="margin-top: 5em; text-align: center">
 		    	<p>“El arte es un pensamiento vivo que se está repensando”</p>
-			  	<small ><cite title="Nombre Apellidos"> Andrés Moore.</cite></small>
+			  	<small ><cite title="Nombre Apellidos"> Andrés Moure.</cite></small>
 		    </div>
 	  	</div>
 		<!--<div class="row">
@@ -44,16 +48,16 @@
 		
 		
 
-		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#home">Inicio</a></li>
-			<li><a data-toggle="tab" href="#menu1">Reportaje</a></li>
-			<li><a data-toggle="tab" href="#menu2">Pequeño Teatro</a></li>
-			<li><a data-toggle="tab" href="#menu3">Teatro Matacandelas</a></li>
-			<li><a data-toggle="tab" href="#menu4">Salas Abiertas</a></li>
-			<li><a data-toggle="tab" href="#menu5">Proceso de Investigación</a></li>
+		<ul class="nav nav-tabs" style="font-size: 1.2em;font-weight: bold;">
+			<li id="homelist" class="active"><a data-toggle="tab" href="#home">Inicio</a></li>
+			<li id="menu1list"><a data-toggle="tab" href="#menu1">Reportaje</a></li>
+			<li id="menu2list"><a data-toggle="tab" href="#menu2">Pequeño Teatro</a></li>
+			<li id="menu3list"><a data-toggle="tab" href="#menu3">Teatro Matacandelas</a></li>
+			<li id="menu4list"><a data-toggle="tab" href="#menu4">Salas Abiertas</a></li>
+			<li id="menu5list"><a data-toggle="tab" href="#menu5">Proceso de Investigación</a></li>
 		</ul>
 
-		<div class="tab-content">
+		<div id="tabcontent" class="tab-content">
 			<div id="home" class="tab-pane fade in active">
 			  	<div class="container-fluid" style="margin-top: 2%;">
 
@@ -68,12 +72,12 @@
 				  			<img src="images/IMG_1216.JPG" width="100%" height="100%">
 				  		</div>
 				  		<div class="col-md-6">
-				  			<p style="text-align: justify;text-justify: inter-word;font-size: 1.2em;"> De acuerdo con el Plan de Ordenamiento Territorial (POT) de la Alcaldía de Medellín, el Centro sigue siendo el principal referente histórico y cultural de la ciudad y sus
+				  			<p style="text-align: justify;text-justify: inter-word;"> De acuerdo con el Plan de Ordenamiento Territorial (POT) de la Alcaldía de Medellín, el Centro sigue siendo el principal referente histórico y cultural de la ciudad y sus
 							actividades siguen siendo destino para una parte importante de la población municipal y regional,
 							a pesar de que históricamente la presencia reiterada de bandas criminales y la indisciplina social
 							que se ha arraigado a esta parte de la ciudad se han encargado de degradar su imagen con el
 							transcurrir de los años y las circunstancias.</p>
-							<p style="text-align: justify;text-justify: inter-word;font-size: 1.2em;">La importancia de la infraestructura del centro de Medellín para el desarrollo cultural que
+							<p style="text-align: justify;text-justify: inter-word;">La importancia de la infraestructura del centro de Medellín para el desarrollo cultural que
 							pretenden potenciar las entidades gubernamentales en conjunto con los artistas y organizadores
 							de los eventos es trascendental para cumplir con las metas establecidas. Para la Secretaría de
 							Cultura es sustancial apelar a aquellos escenarios que hacen parte del patrimonio histórico de la
@@ -88,7 +92,7 @@
 							cómo estos contribuyen a su mejoría y se relacionan con los cambios en la programación y las
 							propuestas artísticas; y rastrear el crecimiento en cuanto a agrupaciones y artistas que
 							contribuyen a la organización y ejecución de los eventos desde el año 2016.</p>
-							<p style="text-align: justify;text-justify: inter-word;font-size: 1.2em;">Además, la investigación pretende mostrar las diferentes temáticas que ofrecen las obras en
+							<p style="text-align: justify;text-justify: inter-word;">Además, la investigación pretende mostrar las diferentes temáticas que ofrecen las obras en
 							ambos espacios, esto, puesto en conjunto con el tipo de público hacia quienes van dirigidas, sus
 							sensaciones respecto a las creaciones proyectadas y cuáles de estas han sido las más laureadas en
 							un periodo de tiempo que comienza desde el inicio de la gestión de Amalia Londoño. Bienvenidos.</p>
@@ -107,15 +111,21 @@
 					    <!-- Wrapper for slides -->
 					    <div class="carousel-inner" role="listbox">
 					      <div class="item active">
-					        <img src="images/reportaje1.jpg" alt="Base" width="100%" height="345">
+				      		<a href="#tabcontent" title="">
+				        		<img src="images/reportaje1.jpg" alt="Base" width="100%" height="345" onclick="changetab('home','menu1')">
+				        	</a>
 					      </div>
 
 					      <div class="item">
-					        <img src="images/reportaje2.jpg" alt="Food" width="100%" height="345">
+					      	<a href="#tabcontent" title="">
+					        	<img src="images/reportaje2.jpg" alt="Food" width="100%" height="345" onclick="changetab('home','menu1')">
+							</a>
 					      </div>
 					    
 					      <div class="item">
-					        <img src="images/reportaje3.jpg" alt="Food" width="100%" height="345">
+					      	<a href="#tabcontent" title="">
+					        	<img src="images/reportaje3.jpg" alt="Food" width="100%" height="345" onclick="changetab('home','menu1')">
+				        	</a>
 					      </div>
 					    </div>
 
@@ -133,11 +143,11 @@
 				  	<div class="row">
 				  		<div class="col-md-6">
 				  			<h3>El pequeño teatro</h3>
-				  			<img src="images/teatro3.jpg" alt="Food" width="100%" height="auto">
+				  			<img src="images/elpequenoteatro.jpg" alt="Food" width="100%" height="auto">
 				  		</div>
 				  		<div  class="col-md-6">
 				  			<h3>Teatro Matacandelas</h3>
-				  			<img src="images/teatro2.jpg" alt="Food" width="100%" height="auto">
+				  			<img src="images/teatromatacandela1.jpg" alt="Food" width="100%" height="auto">
 				  		</div>
 				  	</div>
 				  	<br>
@@ -151,11 +161,19 @@
 					    <!-- Wrapper for slides -->
 					    <div class="carousel-inner" role="listbox">
 					      <div class="item active">
-					        <img src="images/conclusion1.jpg" alt="Base" width="100%" height="345">
+					        <img src="images/salasabiertas1.jpg" alt="Base" width="100%" height="345">
 					      </div>
 
 					      <div class="item">
-					        <img src="images/conclusion2.jpg" alt="Food" width="100%" height="345">
+					        <img src="images/salasabiertas2.jpg" alt="Food" width="100%" height="345">
+					      </div>
+
+					      <div class="item">
+					        <img src="images/salasabiertas3.jpg" alt="Food" width="100%" height="345">
+					      </div>
+
+					      <div class="item">
+					        <img src="images/salasabiertas4.jpg" alt="Food" width="100%" height="345">
 					      </div>
 					    </div>
 
@@ -185,15 +203,15 @@
 				    <!-- Wrapper for slides -->
 				    <div class="carousel-inner" role="listbox">
 				      <div class="item active">
-				        <img src="images/teatro1.jpg" alt="Base" width="100%" height="345">
+				        <img src="images/reportaje1.jpg" alt="Base" width="100%" height="345">
 				      </div>
 
 				      <div class="item">
-				        <img src="images/teatro2.jpg" alt="Food" width="100%" height="345">
+				        <img src="images/reportaje2.jpg" alt="Food" width="100%" height="345">
 				      </div>
 				    
 				      <div class="item">
-				        <img src="images/teatro3.jpg" alt="Food" width="100%" height="345">
+				        <img src="images/reportaje3.jpg" alt="Food" width="100%" height="345">
 				      </div>
 				    </div>
 
@@ -208,54 +226,90 @@
 				    </a>
 			  	</div>
 			  	<br>
-			  	<p><h3 style="text-align: center; font-weight: bold;"> Un día en el Matacandelas y El Pequeño Teatro.</h3></p>
+			  	<p><h3 style="text-align: center; font-weight: bold;"> Un día en el Matacandelas y El Pequeño Teatro.</h3></p><br>
 
-			  	<p style="text-align: justify;text-justify: inter-word;">La actividad del Teatro Matacandelas no cesa incluso cuando el colectivo encargado de gran parte de las obras está ausente en su gira por Venezuela. Al ser un lugar que históricamente ha abierto su espacio a diferentes manifestaciones artísticas provenientes de diversos grupos, el teatro abrió las puertas a Freddy Ginebra y Alejandro Vásquez, director y actor del monólogo A Veces Grito, una obra traída desde la Casa de Teatro República Dominicana que también le sirve al Matacandelas para avanzar en uno de los requisitos para acceder al estímulo del programa de Salas Abiertas que es el de traer invitados internacionales.</p>
+			  	<div class="row">
+			  		<div class="col-md-6">
+			  			<p style="text-align: justify;text-justify: inter-word;">La actividad del Teatro Matacandelas no cesa incluso cuando el colectivo encargado de gran parte de las obras está ausente en su gira por Venezuela. Al ser un lugar que históricamente ha abierto su espacio a diferentes manifestaciones artísticas provenientes de diversos grupos, el teatro abrió las puertas a Freddy Ginebra y Alejandro Vásquez, director y actor del monólogo A Veces Grito, una obra traída desde la Casa de Teatro República Dominicana que también le sirve al Matacandelas para avanzar en uno de los requisitos para acceder al estímulo del programa de Salas Abiertas que es el de traer invitados internacionales.</p>
+
+			  			<p style="text-align: justify;text-justify: inter-word;">Las entradas para la cada función normalmente comienzan a repartirse una hora antes del comienzo. Allí, el contexto natural del centro de Medellín y su vertiginosidad urbana cobija en la sala de espera a un público que en su mayoría es joven, y que muchas veces se desliga de lo rutinario para darle espacio a uno que otro adulto mayor aún interesado en el desarrollo artístico de la ciudad.</p>
+
+			  			<p style="text-align: justify;text-justify: inter-word;">Los momentos previos al inicio de la función son un ritual que va desde la bienvenida por parte de los integrantes del teatro encargados de la logística, la administración y la oferta de consumibles, hasta el cuchicheo típico que se presenta en las filas, que en la mayoría de los casos es el medio para manifestar el asombro colectivo que genera el largo de las filas en un teatro que aglomera más gente a medida que pasa el tiempo y que suena su primera alarma 5 minutos antes de que inicie la función.</p>
+
+			  			<p style="text-align: justify;text-justify: inter-word;">A las 8 en punto los asistentes se preparan para ingresar al salón por una puerta que se abre 10 minutos después y donde un integrante del teatro hace la recomendación de apagar los teléfonos celulares. Después de que el ingreso ha sido habilitado, se dispone todo para proyectar la obra que fue escrita hace más de 50 años y ha sido privilegiada con la posibilidad de expandirse nacional e internacionalmente en 8 países y 45 ciudades entre Europa, Caribe y Centroamérica.</p>
+
+			  			<img src="images/entrada2.jpg" alt="" width="100%" height="auto">
+			  		</div>
+			  		<div class="col-md-6">
+			  			<img src="images/entrada.jpg" alt="" width="100%" height="auto">
+
+			  			<br>
+			  			<br>
+			  			<p style="text-align: justify;text-justify: inter-word;">En A Veces Grito, el recinto se convierte en un consultorio psiquiátrico donde el público puede ver como un personaje, en medio de su angustia y su incredulidad, hace catarsis y pelea con un pasado ligado a un delirio, generado entre otras cosas, por su difícil entorno familiar. </p>
+
+						<p style="text-align: justify;text-justify: inter-word;">La obra es el transporte a un universo múltiple donde el actor con un gran dominio kinestésico utiliza de forma impecable todas sus herramientas para darle el ritmo propio de la vida cotidiana a una obra que termina mostrando los caminos normales que debe recorrer el hombre con el fin de encontrar el norte, que se abre como una luz ante él después de un exorcismo que le permite escudriñar sus mas profundas dudas y negaciones.</p>
+
+						<p style="text-align: justify;text-justify: inter-word;">A Veces Grito aparece como una invitación a superar las barreras humanas de lo establecido y a buscar en las páginas del pasado aquellos elementos y acontecimientos que se han encargado de construir un ser que debe estar en constante indagación. </p>
+
+						<p style="text-align: justify;text-justify: inter-word;">Alejandro Vásquez, único actor de la obra, después de terminada la función y ya por fuera de su libreto expresaba que uno de los problemas culturales de Medellín es que siempre predomina en las obras un tipo de público, “el problema es de Medellín, en esta ciudad asiste a teatro esta nueva generación que está saliendo, pero hay otra a la que no le importa la cultura…ahora estamos muy comercializados y muy globalizados”. Desde lo cultural, la obra también es un intento mas del teatro para romper con ese vínculo comercial y artístico que pone al humor como el tema predominante en la ciudad.</p>
+			  		</div>
+			  	</div>
+
+			  	
+			  	
+			  	<div class="row">
+			  		<div class="col-md-6">
+			  			
+			  			
+			  		</div>
+			  		<div class="col-md-6">
+			  			
+			  		</div>
+			  	</div>
+			  	<hr>
+				
+			  	<div class="row">
+			  		<div class="col-md-6">
+			  			<p style="text-align: justify;text-justify: inter-word;font-weight: bold; font-size: 1.5em;">De la locura individual a la expresión nazi.</p>
 
 
-				<p style="text-align: justify;text-justify: inter-word;">Las entradas para la cada función normalmente comienzan a repartirse una hora antes del comienzo. Allí, el contexto natural del centro de Medellín y su vertiginosidad urbana cobija en la sala de espera a un público que en su mayoría es joven, y que muchas veces se desliga de lo rutinario para darle espacio a uno que otro adulto mayor aún interesado en el desarrollo artístico de la ciudad.</p>
+						<p style="text-align: justify;text-justify: inter-word;">En medio de 3 filas que unidas podrían superar el largo de la cuadra donde está ubicado el recinto, el Pequeño Teatro abre sus puertas quince minutos antes de iniciarse la función para que los asistentes compartan los momentos previos a la obra en lugar declarado patrimonio arquitectónico de la ciudad, donde la fachada clásica se mezcla con adornos coloniales y cuadros que evocan la expresión teatral.</p>
+
+						<p style="text-align: justify;text-justify: inter-word;">El teatro cuenta con un patio al aire libre y dos salas donde se realizan las funciones, la Sala Rodrigo Saldarriaga, con una capacidad para 500 espectadores, y la Sala Don Tomás Carrasquilla, que puede albergar a 90 personas y cuyo acceso es conducido por un pasillo en el que se pueden apreciar cuadros que representan las diferentes obras que el teatro ha realizado a lo largo de su trayectoria.</p>
+
+						<p style="text-align: justify;text-justify: inter-word;">En esta ocasión, la sala Rodrigo Saldarriaga será el lugar donde se proyecte Terror y Miseria del Tercer Reich, una obra que transporta a su público al contexto histórico de la segunda guerra mundial desde la perspectiva alemana, donde el nazismo llegó al poder gracias a manipulaciones políticas disfrazadas con una promesa de paz en un país que transformó de forma paulatina su escepticismo en una certeza de que iba a haber una guerra.</p>
+
+						<p style="text-align: justify;text-justify: inter-word;">En medio de diferentes momentos, recreados por los actores que interpretan el rol social de los diferentes personajes, la obra nos pone cara a cara con aspectos como el control de la economía, la censura social y científica, el control político y las características de un régimen dictatorial que cubre sus perversiones bajo un manto propagandístico fundamentado en el sesgo y las mentiras.</p>
+
+						<p style="text-align: justify;text-justify: inter-word;">La obra, en su tramo final, también sirve como vehículo para transmitir un mensaje respecto a la cultura bélica Americana, cuyos actos para mantener su soberanía y su sed de poder a través del tiempo no se aleja de forma considerable de todos los atropellos cometidos por el régimen del Tercer Reich.</p>
+			  		</div>
+			  		<div class="col-md-6">
+			  			<img src="images/IMG_1257.jpg" alt="" width="100%" height="auto">
+			  		</div>
+			  	</div>
+
+			  	<hr>
+				<div class="row">
+			  		<div class="col-md-6">
+			  			<img src="images/textimage1.jpg" alt="" width="100%" height="auto">
+			  		</div>
+			  		<div class="col-md-6">
+			  			
+			  			<p style="text-align: justify;text-justify: inter-word;font-weight: bold; font-size: 1.5em;">Una ciudad que hace frente al estigma de seguridad.</p>
 
 
-				<p style="text-align: justify;text-justify: inter-word;">Los momentos previos al inicio de la función son un ritual que va desde la bienvenida por parte de los integrantes del teatro encargados de la logística, la administración y la oferta de consumibles, hasta el cuchicheo típico que se presenta en las filas, que en la mayoría de los casos es el medio para manifestar el asombro colectivo que genera el largo de las filas en un teatro que aglomera más gente a medida que pasa el tiempo y que suena su primera alarma 5 minutos antes de que inicie la función.</p>
+						<p style="text-align: justify;text-justify: inter-word;">La satisfacción colectiva al final de ambas funciones es el común denominador terminada la jornada, allí, en medio de la noche, los asistentes deben abandonar el recinto en medio de una zona con una gran oferta de rutas de buses, pero que ha sido estigmatizada por las pocas garantías que esta brinda respecto a seguridad.</p>
 
-				<p style="text-align: justify;text-justify: inter-word;">A las 8 en punto los asistentes se preparan para ingresar al salón por una puerta que se abre 10 minutos después y donde un integrante del teatro hace la recomendación de apagar los teléfonos celulares. Después de que el ingreso ha sido habilitado, se dispone todo para proyectar la obra que fue escrita hace más de 50 años y ha sido privilegiada con la posibilidad de expandirse nacional e internacionalmente en 8 países y 45 ciudades entre Europa, Caribe y Centroamérica.</p>
+						<p style="text-align: justify;text-justify: inter-word;">Al respecto, Andrés Moure, director del Teatro Matacandelas, cuenta que desde el año 2015 solo han sido víctimas de un episodio de inseguridad en el teatro, “lo más curioso es que no fue en horario de funciones, sino en horario de oficina. Se llevaron dos celulares y un computador portátil”.</p>
 
-				<p style="text-align: justify;text-justify: inter-word;">En A Veces Grito, el recinto se convierte en un consultorio psiquiátrico donde el público puede ver como un personaje, en medio de su angustia y su incredulidad, hace catarsis y pelea con un pasado ligado a un delirio, generado entre otras cosas, por su difícil entorno familiar. </p>
+						<p style="text-align: justify;text-justify: inter-word;">A pesar de esto, Moure manifiesta que más allá del problema real de inseguridad, hay un estigma que se ha encargado de sembrar de confianza en unas pocas personas “la gente piensa que el centro no es seguro y que al centro no se puede ir, yo llevo 21 años viviendo en el centro y a mí nunca me ha pasado nada”.</p>
+			  		</div>
+			  	</div>
 
-				<p style="text-align: justify;text-justify: inter-word;">La obra es el transporte a un universo múltiple donde el actor con un gran dominio kinestésico utiliza de forma impecable todas sus herramientas para darle el ritmo propio de la vida cotidiana a una obra que termina mostrando los caminos normales que debe recorrer el hombre con el fin de encontrar el norte, que se abre como una luz ante él después de un exorcismo que le permite escudriñar sus mas profundas dudas y negaciones.</p>
-
-				<p style="text-align: justify;text-justify: inter-word;">A Veces Grito aparece como una invitación a superar las barreras humanas de lo establecido y a buscar en las páginas del pasado aquellos elementos y acontecimientos que se han encargado de construir un ser que debe estar en constante indagación. </p>
-
-				<p style="text-align: justify;text-justify: inter-word;">Alejandro Vásquez, único actor de la obra, después de terminada la función y ya por fuera de su libreto expresaba que uno de los problemas culturales de Medellín es que siempre predomina en las obras un tipo de público, “el problema es de Medellín, en esta ciudad asiste a teatro esta nueva generación que está saliendo, pero hay otra a la que no le importa la cultura…ahora estamos muy comercializados y muy globalizados”. Desde lo cultural, la obra también es un intento mas del teatro para romper con ese vínculo comercial y artístico que pone al humor como el tema predominante en la ciudad.</p>
+				<hr>
 
 
-				<p style="text-align: justify;text-justify: inter-word;font-weight: bold;">De la locura individual a la expresión nazi.</p>
-
-
-				<p style="text-align: justify;text-justify: inter-word;">En medio de 3 filas que unidas podrían superar el largo de la cuadra donde está ubicado el recinto, el Pequeño Teatro abre sus puertas quince minutos antes de iniciarse la función para que los asistentes compartan los momentos previos a la obra en lugar declarado patrimonio arquitectónico de la ciudad, donde la fachada clásica se mezcla con adornos coloniales y cuadros que evocan la expresión teatral.</p>
-
-				<p style="text-align: justify;text-justify: inter-word;">El teatro cuenta con un patio al aire libre y dos salas donde se realizan las funciones, la Sala Rodrigo Saldarriaga, con una capacidad para 500 espectadores, y la Sala Don Tomás Carrasquilla, que puede albergar a 90 personas y cuyo acceso es conducido por un pasillo en el que se pueden apreciar cuadros que representan las diferentes obras que el teatro ha realizado a lo largo de su trayectoria.</p>
-
-				<p style="text-align: justify;text-justify: inter-word;">En esta ocasión, la sala Rodrigo Saldarriaga será el lugar donde se proyecte Terror y Miseria del Tercer Reich, una obra que transporta a su público al contexto histórico de la segunda guerra mundial desde la perspectiva alemana, donde el nazismo llegó al poder gracias a manipulaciones políticas disfrazadas con una promesa de paz en un país que transformó de forma paulatina su escepticismo en una certeza de que iba a haber una guerra.</p>
-
-				<p style="text-align: justify;text-justify: inter-word;">En medio de diferentes momentos, recreados por los actores que interpretan el rol social de los diferentes personajes, la obra nos pone cara a cara con aspectos como el control de la economía, la censura social y científica, el control político y las características de un régimen dictatorial que cubre sus perversiones bajo un manto propagandístico fundamentado en el sesgo y las mentiras.</p>
-
-				<p style="text-align: justify;text-justify: inter-word;">La obra, en su tramo final, también sirve como vehículo para transmitir un mensaje respecto a la cultura bélica Americana, cuyos actos para mantener su soberanía y su sed de poder a través del tiempo no se aleja de forma considerable de todos los atropellos cometidos por el régimen del Tercer Reich.</p>
-
-
-
-
-				<p style="text-align: justify;text-justify: inter-word;font-weight: bold;">Una ciudad que hace frente al estigma de seguridad.</p>
-
-
-				<p style="text-align: justify;text-justify: inter-word;">La satisfacción colectiva al final de ambas funciones es el común denominador terminada la jornada, allí, en medio de la noche, los asistentes deben abandonar el recinto en medio de una zona con una gran oferta de rutas de buses, pero que ha sido estigmatizada por las pocas garantías que esta brinda respecto a seguridad.</p>
-
-				<p style="text-align: justify;text-justify: inter-word;">Al respecto, Andrés Moure, director del Teatro Matacandelas, cuenta que desde el año 2015 solo han sido víctimas de un episodio de inseguridad en el teatro, “lo más curioso es que no fue en horario de funciones, sino en horario de oficina. Se llevaron dos celulares y un computador portátil”.</p>
-
-				<p style="text-align: justify;text-justify: inter-word;">A pesar de esto, Moure manifiesta que más allá del problema real de inseguridad, hay un estigma que se ha encargado de sembrar de confianza en unas pocas personas “la gente piensa que el centro no es seguro y que al centro no se puede ir, yo llevo 21 años viviendo en el centro y a mí nunca me ha pasado nada”.</p>
-
-
-				<p style="text-align: justify;text-justify: inter-word;font-weight: bold;">Dos teatros con la misión de sobreponerse.</p>
+				<p style="text-align: justify;text-justify: inter-word;font-weight: bold; font-size: 1.5em;">Dos teatros con la misión de sobreponerse.</p>
 
 
 
@@ -292,20 +346,24 @@
 				      <li data-target="#pequenoteatro" data-slide-to="0" class="active"></li>
 				      <li data-target="#pequenoteatro" data-slide-to="1"></li>
 				      <li data-target="#pequenoteatro" data-slide-to="2"></li>
+				      <li data-target="#pequenoteatro" data-slide-to="3"></li>
 				    </ol>
 
 				    <!-- Wrapper for slides -->
 				    <div class="carousel-inner" role="listbox">
 				      <div class="item active">
-				        <img src="images/teatro1.jpg" alt="Base" width="100%" height="345">
+				        <img src="images/pequenoteatro.jpg" alt="Base" width="100%" height="345">
 				      </div>
 
 				      <div class="item">
-				        <img src="images/teatro2.jpg" alt="Food" width="100%" height="345">
+				        <img src="images/pequenoteatro1.jpg" alt="Food" width="100%" height="345">
 				      </div>
 				    
 				      <div class="item">
-				        <img src="images/teatro3.jpg" alt="Food" width="100%" height="345">
+				        <img src="images/pequenoteatro4.jpg" alt="Food" width="100%" height="345">
+				      </div>
+				      <div class="item">
+				        <img src="images/pequenoteatro3.jpg" alt="Food" width="100%" height="345">
 				      </div>
 				    </div>
 
@@ -345,21 +403,32 @@
 				      <li data-target="#matacandelas" data-slide-to="0" class="active"></li>
 				      <li data-target="#matacandelas" data-slide-to="1"></li>
 				      <li data-target="#matacandelas" data-slide-to="2"></li>
+				      <li data-target="#matacandelas" data-slide-to="3"></li>
+				      <li data-target="#matacandelas" data-slide-to="4"></li>
 				    </ol>
 
 				    <!-- Wrapper for slides -->
 				    <div class="carousel-inner" role="listbox">
 				      <div class="item active">
-				        <img src="images/teatro1.jpg" alt="Base" width="100%" height="345">
+				        <img src="images/teatromatacandela.jpg" alt="Base" width="100%" height="345">
 				      </div>
 
 				      <div class="item">
-				        <img src="images/teatro2.jpg" alt="Food" width="100%" height="345">
+				        <img src="images/teatromatacandelas5.jpg" alt="Food" width="100%" height="345">
 				      </div>
 				    
 				      <div class="item">
-				        <img src="images/teatro3.jpg" alt="Food" width="100%" height="345">
+				        <img src="images/teatromatacandelas2.jpg" alt="Food" width="100%" height="345">
 				      </div>
+
+				      <div class="item">
+				        <img src="images/teatromatacandelas3.jpg" alt="Food" width="100%" height="345">
+				      </div>
+
+				      <div class="item">
+				        <img src="images/teatromatacandelas4.jpg" alt="Food" width="100%" height="345">
+				      </div>
+
 				    </div>
 
 				    <!-- Left and right controls -->
@@ -384,28 +453,36 @@
 				<p style="text-align: justify;text-justify: inter-word;">Ahora mismo, el disgusto es generalizado por parte de los colectivos teatrales públicos de la ciudad, debido a que las exigencias para acceder al estímulo del programa de Salas Abiertas de la Alcaldía de Medellín son desbordadas y convierten el proyecto en un “mal negocio”.</p>
 
 				<p style="text-align: justify;text-justify: inter-word;">Realizar 8 funciones al año al aire libre, mantener siempre visible el pendón publicitario de Salas Abiertas, invertir en el mejoramiento de salas y traer invitados nacionales e internacionales son solo algunas de las exigencias de un estímulo que “no nos lo están dando, lo estamos requetepagando y además nos los están pagando mal pago” según declaraciones de Catalina Murillo, actriz del Pequeño Teatro, al periódico De la Urbe.</p>
+				<hr>
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<audio controls>					         
-					          	<source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+					          	<source src="audios/respuesta1salasabiertas.mp3" type="audio/mpeg" />
 					        </audio>
 					        <br>
-					        Audio que explica que carajos esto
+					        <p style="text-align: justify;text-justify: inter-word;">La “inseguridad” en el centro.</p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<audio controls>					         
-					          	<source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+					          	<source src="audios/respuesta2salasabiertas.mp3" type="audio/mpeg" />
 					        </audio>
 					        <br>
-					        Audio que explica que carajos esto
+					        <p style="text-align: justify;text-justify: inter-word;">La labor en conjunto de los teatros con la secretaría de cultura.</p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<audio controls>					         
-					          	<source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+					          	<source src="audios/respuesta3salasabiertas.mp3" type="audio/mpeg" />
 					        </audio>
 					        <br>
-					        Audio que explica que carajos esto
+					        <p style="text-align: justify;text-justify: inter-word;">Percepción respecto a la ejecución de la agenda cultural.</p>
+						</div>
+						<div class="col-md-3">
+							<audio controls>					         
+					          	<source src="audios/respuesta4salasabiertas.mp3" type="audio/mpeg" />
+					        </audio>
+					        <br>
+					        <p style="text-align: justify;text-justify: inter-word;">¿De qué forma la expresión teatral podría ser más valorada en la ciudad?	</p>
 						</div>
 					</div>
 				</div>
@@ -418,20 +495,25 @@
 				      <li data-target="#salasabiertas" data-slide-to="0" class="active"></li>
 				      <li data-target="#salasabiertas" data-slide-to="1"></li>
 				      <li data-target="#salasabiertas" data-slide-to="2"></li>
+				      <li data-target="#salasabiertas" data-slide-to="3"></li>
 				    </ol>
 
 				    <!-- Wrapper for slides -->
 				    <div class="carousel-inner" role="listbox">
 				      <div class="item active">
-				        <img src="images/conclusion1.jpg" alt="Base" width="100%" height="345">
+				        <img src="images/salasabiertas1.jpg" alt="Base" width="100%" height="345">
 				      </div>
 
 				      <div class="item">
-				        <img src="images/teatro2.jpg" alt="Food" width="100%" height="345">
+				        <img src="images/salasabiertas2.jpg" alt="Food" width="100%" height="345">
 				      </div>
 				    
 				      <div class="item">
-				        <img src="images/conclusion2.jpg" alt="Food" width="100%" height="345">
+				        <img src="images/salasabiertas3.jpg" alt="Food" width="100%" height="345">
+				      </div>
+
+				      <div class="item">
+				        <img src="images/salasabiertas4.jpg" alt="Food" width="100%" height="345">
 				      </div>
 				    </div>
 
@@ -479,6 +561,15 @@
     </footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		function changetab(tabactive,tabnext){
+			$("#"+tabactive).removeClass( "active in" );
+			$("#"+tabactive+"list").removeClass( "active" );
+			$("#"+tabnext).addClass( "active in" );
+			$("#"+tabnext+"list").addClass( "active" );
+		}
+	</script>
 
 </body>
 	
